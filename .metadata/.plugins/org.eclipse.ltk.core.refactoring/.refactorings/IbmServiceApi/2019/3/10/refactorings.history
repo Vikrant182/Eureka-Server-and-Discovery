@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;ErrorModel.java&apos; to &apos;EmployerApi/src/main/java/com.employer.model&apos;&#x0D;&#x0A;- Original project: &apos;IbmServiceApi&apos;&#x0D;&#x0A;- Destination element: &apos;EmployerApi/src/main/java/com.employer.model&apos;&#x0D;&#x0A;- Original element: &apos;com.training.ibm.response.model.ErrorModel.java&apos;" description="Copy compilation unit" destination="=EmployerApi/src\/main\/java&lt;com.employer.model" element1="/src\/main\/java&lt;com.training.ibm.response.model{ErrorModel.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1551878867909" units="1" version="1.0"/>
+</session>

@@ -1,0 +1,32 @@
+package com.employer.controller.impl;
+
+import java.util.List;
+
+import org.springframework.web.bind.annotation.RestController;
+
+import com.employer.controller.IEmployerController;
+import com.employer.model.EmployerInfoModel;
+
+@RestController
+public class EmployerControllerImpl implements IEmployerController{
+
+	@Override
+	public List<EmployerInfoModel> getAllEmployer() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public EmployerInfoModel getEmployerById(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public EmployerInfoModel getEmployerByName(String name) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+	
+}

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aop-reference-model>
+<aop-project name="EmployeeApi"/>
+<aop-project name="EmployeeApp"/>
+<aop-project name="EmployerApi"/>
+<aop-project name="EmployerApp"/>
+<aop-project name="EmployeeEurekaServer"/>
+<aop-project name="EmployeeConfigServer"/>
+<aop-project name="SchoolApi"/>
+<aop-project name="SchoolApp"/>
+<aop-project name="StudentApi"/>
+<aop-project name="StudentApp"/>
+</aop-reference-model>

@@ -1,0 +1,27 @@
+package com.school.controller.impl;
+
+import java.util.List;
+
+import org.springframework.web.bind.annotation.RestController;
+
+import com.school.controller.ISchoolController;
+import com.school.model.SchoolInfoModel;
+
+@RestController
+public class SchoolControllerImpl implements ISchoolController{
+
+	public List<SchoolInfoModel> getAllSchoolInfo() {
+		return null;
+	}
+
+	
+	public SchoolInfoModel getSchoolInfoById(int id) {
+		return null;
+	}
+
+	
+	public SchoolInfoModel getSchoolInfoBySchoolName(String schoolName) {
+		return null;
+	}
+
+}

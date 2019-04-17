@@ -1,0 +1,8 @@
+package com.school.service;
+
+import com.school.model.SchoolInfoModel;
+
+public interface ISchoolService {
+	
+	public SchoolInfoModel findAllSchoolInfo();
+}

@@ -1,0 +1,5 @@
+package com.employer.service;
+
+public interface IEmployerService {
+
+}

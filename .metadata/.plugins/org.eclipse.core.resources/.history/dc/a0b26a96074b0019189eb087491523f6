@@ -1,0 +1,32 @@
+package com.school.controller.impl;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.school.controller.ISchoolController;
+import com.school.model.SchoolInfoModel;
+import com.school.service.ISchoolService;
+
+@RestController
+public class SchoolControllerImpl implements ISchoolController{
+	
+	@Autowired
+	private ISchoolService schoolService;
+
+	public List<SchoolInfoModel> getAllSchoolInfo() {
+		return schoolService.findAllSchoolInfo();
+	}
+
+	
+	public SchoolInfoModel getSchoolInfoById(int id) {
+		return schoolService.findSchoolInfoById(schoolId);
+	}
+
+	
+	public SchoolInfoModel getSchoolInfoBySchoolName(String schoolName) {
+		return null;
+	}
+
+}

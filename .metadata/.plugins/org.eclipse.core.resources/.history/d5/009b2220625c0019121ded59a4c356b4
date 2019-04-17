@@ -1,0 +1,7 @@
+package com.employer.model;
+
+public class EmployerInfoModel {
+
+	private int employerId;
+	private String employerName;
+}

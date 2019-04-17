@@ -1,0 +1,11 @@
+package com.student.config;
+
+import org.springframework.cloud.openfeign.FeignClient;
+
+import com.school.controller.ISchoolController;
+import com.student.controller.IStudentController;
+
+@FeignClient(name="schoolservice", url="schoolservice.school.svc.cluster.local")
+public interface ISchoolFeignClient extends ISchoolController{
+
+}

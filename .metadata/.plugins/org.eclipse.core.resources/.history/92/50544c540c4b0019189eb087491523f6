@@ -1,0 +1,87 @@
+package com.student.service.impl;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.student.config.ISchoolFeignClient;
+import com.student.model.StudentInfoModel;
+import com.student.service.IStudentService;
+
+@Service
+public class StudentServiceImpl implements IStudentService {
+	
+	@Autowired
+	private ISchoolFeignClient feignClient;
+
+	List<StudentInfoModel> infoModels = new ArrayList<>();
+
+	private StudentServiceImpl() {
+		StudentInfoModel model = new StudentInfoModel();
+		model.setId(1);
+		model.setName("Vikrant");
+		model.setAge(27);
+		model.setGender("Male");
+		model.setSchoolName("kv");
+
+		StudentInfoModel model1 = new StudentInfoModel();
+		model1.setId(2);
+		model1.setName("Vicky");
+		model1.setAge(28);
+		model1.setGender("Male1");
+		model.setSchoolName("dps");
+
+		StudentInfoModel model2 = new StudentInfoModel();
+		model2.setId(3);
+		model2.setName("Vikku");
+		model2.setAge(29);
+		model2.setGender("Male2");
+		model.setSchoolName("gps");
+
+		infoModels.add(model);
+		infoModels.add(model1);
+		infoModels.add(model2);
+
+	}
+
+	public List<StudentInfoModel> findAllStudentinfo() {
+		infoModels.forEach(model ->{
+			model.setModel(feignClient.getStudentInfoByName(model.getSchoolName()));
+		});
+		return infoModels;
+	}
+
+	public StudentInfoModel findStudentInfoById(int id) {
+
+		StudentInfoModel newModel = new StudentInfoModel();
+
+		infoModels.forEach(model -> {
+			if (id == model.getId()) {
+				newModel.setId(id);
+				newModel.setName(model.getName());
+				newModel.setAge(model.getAge());
+				newModel.setGender(model.getGender());
+			}
+		});
+
+		return newModel;
+	}
+
+	public StudentInfoModel findStudentInfoByName(String name) {
+		StudentInfoModel newModel1 = new StudentInfoModel();
+
+		infoModels.forEach(model -> {
+			if (name.equalsIgnoreCase(model.getName())) {
+				newModel1.setId(model.getId());
+				newModel1.setName(name);
+				newModel1.setAge(model.getAge());
+				newModel1.setGender(model.getGender());
+			}
+		});
+
+		return newModel1;
+	}
+
+}

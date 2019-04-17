@@ -1,0 +1,8 @@
+package com.employer.service.impl;
+
+import org.springframework.stereotype.Service;
+
+@Service
+public class EmployerServiceImpl {
+
+}

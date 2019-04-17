@@ -1,0 +1,7 @@
+package com.employee.config;
+
+import com.employer.controller.IEmployerController;
+
+public interface IEmployerFeignClient extends IEmployerController{
+
+}

@@ -1,0 +1,79 @@
+package com.employee.service.impl;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.employee.config.IEmployerFeignClient;
+import com.employee.model.EmployeeInfoModel;
+import com.employee.service.IEmployeeService;
+
+@Service
+public class EmployeeServiceImpl implements IEmployeeService{
+	
+	@Autowired
+	IEmployerFeignClient client;
+	
+	List<EmployeeInfoModel> empList = new ArrayList<>();
+	public EmployeeServiceImpl() {
+		EmployeeInfoModel model = new EmployeeInfoModel();
+		model.setId(1);
+		model.setName("vik1");
+		model.setSalary(10000);
+		model.setEmployerName("ibm");
+		
+		EmployeeInfoModel model1 = new EmployeeInfoModel();
+		model1.setId(2);
+		model1.setName("vik2");
+		model1.setSalary(15000);
+		model1.setEmployerName("cts");
+		
+		EmployeeInfoModel model2 = new EmployeeInfoModel();
+		model2.setId(2);
+		model2.setName("vik2");
+		model2.setSalary(20000);
+		model2.setEmployerName("GS");
+		
+		empList.add(model);
+		empList.add(model1);
+		empList.add(model2);
+	}
+	
+	
+	public List<EmployeeInfoModel> findAllEmployee() {
+		return empList;
+	}
+
+	public EmployeeInfoModel findEmployeeById(int id) {
+		EmployeeInfoModel newModel = new EmployeeInfoModel();
+		empList.forEach(model -> {
+			if(id == model.getId()) {
+				newModel.setId(id);
+				newModel.setName(model.getName());
+				newModel.setSalary(model.getSalary());
+				newModel.setEmployerName(model.getEmployerName());
+			}
+		});
+		return newModel;
+	}
+
+	public EmployeeInfoModel findEmployeeByName(String name) {
+		EmployeeInfoModel newModel1 = new EmployeeInfoModel();
+		System.out.println("emplist ::" +empList);
+		empList.forEach(model -> {
+			if(name.equalsIgnoreCase(model.getName())) {
+				newModel1.setId(model.getId());
+				newModel1.setName(name);
+				newModel1.setSalary(model.getSalary());
+				System.out.println("employer name :::: "+model.getEmployerName());
+				newModel1.setEmployerName(model.getEmployerName());
+				System.out.println("newmodel1 name ::: "+newModel1.getEmployerName());
+				newModel1.setEmpModel(client.getEmployerByName(model.getEmployerName()));
+			}
+		});
+		return newModel1;
+	}
+
+}

@@ -1,0 +1,31 @@
+package com.employer.service.impl;
+
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+import com.employer.model.EmployerInfoModel;
+import com.employer.service.IEmployerService;
+
+@Service
+public class EmployerServiceImpl implements IEmployerService{
+
+	@Override
+	public List<EmployerInfoModel> findAllEmployer() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public EmployerInfoModel findEmployerById(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public EmployerInfoModel findEmployerByName(String name) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

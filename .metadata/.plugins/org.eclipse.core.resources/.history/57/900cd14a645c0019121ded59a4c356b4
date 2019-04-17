@@ -1,0 +1,45 @@
+package com.employer.service.impl;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+import com.employer.model.EmployerInfoModel;
+import com.employer.service.IEmployerService;
+
+@Service
+public class EmployerServiceImpl implements IEmployerService{
+	
+	List<EmployerInfoModel> emplList = new ArrayList<>();
+	
+	public EmployerServiceImpl() {
+		EmployerInfoModel model = new EmployerInfoModel();
+		model.setEmployerId(101);
+		model.setEmployerName("ibm");
+		model.setCapacity(50000);
+		
+		EmployerInfoModel model1 = new EmployerInfoModel();
+		model1.setEmployerId(102);
+		model1.setEmployerName("cts");
+		model1.setCapacity(40000);
+		
+		EmployerInfoModel model2 = new EmployerInfoModel();
+		model2.setEmployerId(101);
+		model2.setEmployerName("ibm");
+		model2.setCapacity(50000);
+	}
+
+	public List<EmployerInfoModel> findAllEmployer() {
+		return null;
+	}
+
+	public EmployerInfoModel findEmployerById(int id) {
+		return null;
+	}
+
+	public EmployerInfoModel findEmployerByName(String name) {
+		return null;
+	}
+
+}

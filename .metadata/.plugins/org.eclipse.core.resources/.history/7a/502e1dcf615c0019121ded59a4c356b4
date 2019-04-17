@@ -1,0 +1,8 @@
+package com.employer.controller;
+
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@RequestMapping("/employer")
+public interface IEmployerController {
+
+}

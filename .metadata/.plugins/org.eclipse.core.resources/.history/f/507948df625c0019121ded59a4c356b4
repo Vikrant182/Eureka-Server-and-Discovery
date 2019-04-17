@@ -1,0 +1,8 @@
+package com.employer.service;
+
+import com.employer.model.EmployerInfoModel;
+
+public interface IEmployerService {
+	
+	public EmployerInfoModel findAllEmployer();
+}

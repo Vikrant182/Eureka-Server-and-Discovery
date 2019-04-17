@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: EmployeeConfigServer
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/Vikrant182/SpringConfigServer.git
+    
+server:
+  port: 8081
+  

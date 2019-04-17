@@ -1,0 +1,5 @@
+package com.employer.controller;
+
+public interface IEmployerController {
+
+}

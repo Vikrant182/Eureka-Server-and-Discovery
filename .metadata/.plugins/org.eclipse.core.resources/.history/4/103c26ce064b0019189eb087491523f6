@@ -1,0 +1,31 @@
+package com.school.controller.impl;
+
+import java.util.List;
+
+import org.springframework.web.bind.annotation.RestController;
+
+import com.school.controller.ISchoolController;
+import com.school.model.SchoolInfoModel;
+
+@RestController
+public class SchoolControllerImpl implements ISchoolController{
+
+	@Override
+	public List<SchoolInfoModel> getAllSchoolInfo() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public SchoolInfoModel getSchoolInfoById(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public SchoolInfoModel getSchoolInfoBySchoolName(String schoolName) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

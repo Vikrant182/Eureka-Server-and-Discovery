@@ -1,0 +1,13 @@
+package com.school.model;
+
+import lombok.Setter;
+
+import lombok.Getter;
+
+@Getter
+@Setter
+public class SchoolInfoModel {
+	
+	private int schoolId;
+	private String schoolName;
+}

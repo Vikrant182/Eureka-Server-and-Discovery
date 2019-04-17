@@ -1,0 +1,12 @@
+package com.school.service;
+
+import java.util.List;
+
+import com.school.model.SchoolInfoModel;
+
+public interface ISchoolService {
+	
+	public List<SchoolInfoModel> findAllSchoolInfo();
+	
+	public SchoolInfoModel findSchoolInfoById(int schoolId);
+}

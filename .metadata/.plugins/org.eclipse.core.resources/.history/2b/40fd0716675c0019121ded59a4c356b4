@@ -1,0 +1,12 @@
+package com.employee.model;
+
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
+public class EmployeeInfoModel {
+	private int id;
+	private String name;
+	private long salary;
+}

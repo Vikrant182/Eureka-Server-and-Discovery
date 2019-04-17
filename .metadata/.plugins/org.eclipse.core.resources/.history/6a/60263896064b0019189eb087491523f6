@@ -1,0 +1,22 @@
+package com.school.controller;
+
+import java.util.List;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.school.model.SchoolInfoModel;
+
+@RequestMapping(value="/school")
+public interface SchoolController {
+	
+	@GetMapping(value="/get/all/info")
+	public List<SchoolInfoModel> getAllSchoolInfo();
+	
+	@GetMapping(value="/get/info/id/{id}")
+	public SchoolInfoModel getSchoolInfoById(@PathVariable ("id") int id);
+	
+	@GetMapping(value="/get/info/name/{school-name}")
+	public SchoolInfoModel getSchoolInfoBySchoolName(@PathVariable ("school-name") String schoolName);
+}

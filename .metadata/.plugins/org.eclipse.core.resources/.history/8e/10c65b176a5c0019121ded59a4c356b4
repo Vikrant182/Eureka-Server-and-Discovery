@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: eurekaserver
+
+server:
+  port: 9001    
+
+
+  client:
+    service-url:
+      defaultZone: 
+    register-with-eureka: false
+    fetch-registry: false
+
+

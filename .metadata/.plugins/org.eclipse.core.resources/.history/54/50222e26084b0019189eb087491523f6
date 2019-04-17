@@ -1,0 +1,38 @@
+package com.school.service.impl;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+import com.school.model.SchoolInfoModel;
+import com.school.service.ISchoolService;
+
+@Service
+public class SchoolServiceImpl implements ISchoolService{
+
+	List<SchoolInfoModel> infoModels = new ArrayList<>();
+	
+	public SchoolServiceImpl() {
+		
+		
+	}
+	
+	public List<SchoolInfoModel> findAllSchoolInfo() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	
+	public SchoolInfoModel findSchoolInfoById(int schoolId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	
+	public SchoolInfoModel findSchoolInfoBySchoolName(String schoolName) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

@@ -1,0 +1,37 @@
+# SchoolService-deployment.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata: 
+  name: schoolapp-v1
+spec: 
+  replicas: 1
+  selector:
+    matchLabels:
+      app: schoolapp
+      version: "v1"
+  template:
+    metadata: 
+      labels:
+        app: schoolapp
+        version: "v1"
+    spec: 
+      containers:
+      - name : schoolapp
+        image: vikrantcontainterreg.azurecr.io/schoolservice:v1
+        ports:
+        - containerPort: 8901
+          name: https
+---
+# SchoolService-service.yaml
+apiVersion: v1
+kind: Service
+metadata: 
+  name: studentservice
+  labels:
+    app: studentapp
+spec:
+  ports:
+  - port: 8900
+    name: https
+  selector:
+    app: studentapp

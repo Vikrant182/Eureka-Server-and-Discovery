@@ -1,0 +1,28 @@
+package com.employee.controller.impl;
+
+import java.util.List;
+
+import org.springframework.web.bind.annotation.RestController;
+
+import com.employee.controller.IEmployeeController;
+import com.employee.model.EmployeeInfoModel;
+
+@RestController
+public class EmployeeControllerImpl implements IEmployeeController{
+
+	public List<EmployeeInfoModel> getAllEmployeeInfo() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public EmployeeInfoModel getEmployeeById(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public EmployeeInfoModel getEmployeeByName(String name) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

@@ -1,0 +1,77 @@
+package com.school.service.impl;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+import com.school.model.SchoolInfoModel;
+import com.school.service.ISchoolService;
+
+@Service
+public class SchoolServiceImpl implements ISchoolService {
+
+	List<SchoolInfoModel> infoModels = new ArrayList<>();
+
+	public SchoolServiceImpl() {
+
+		SchoolInfoModel model = new SchoolInfoModel();
+		model.setSchoolId(1);
+		model.setSchoolName("kv");
+		model.setSchoolCity("bangalore");
+		model.setSchoolStrength(5000);
+
+		SchoolInfoModel model1 = new SchoolInfoModel();
+		model1.setSchoolId(2);
+		model1.setSchoolName("dps");
+		model1.setSchoolCity("bangalore");
+		model1.setSchoolStrength(10000);
+
+		SchoolInfoModel model2 = new SchoolInfoModel();
+		model2.setSchoolId(3);
+		model2.setSchoolName("gps");
+		model2.setSchoolCity("bangalore");
+		model2.setSchoolStrength(15000);
+
+		infoModels.add(model);
+		infoModels.add(model1);
+		infoModels.add(model2);
+
+	}
+
+	public List<SchoolInfoModel> findAllSchoolInfo() {
+		return infoModels;
+	}
+
+	public SchoolInfoModel findSchoolInfoById(int schoolId) {
+
+		SchoolInfoModel newModel = new SchoolInfoModel();
+
+		infoModels.forEach(model -> {
+			if (schoolId == model.getSchoolId()) {
+				newModel.setSchoolId(schoolId);
+				newModel.setSchoolName(model.getSchoolName());
+				newModel.setSchoolCity(model.getSchoolCity());
+				newModel.setSchoolStrength(model.getSchoolStrength());
+			}
+		});
+
+		return newModel;
+	}
+
+	public SchoolInfoModel findSchoolInfoBySchoolName(String schoolName) {
+		SchoolInfoModel newModel = new SchoolInfoModel();
+
+		infoModels.forEach(model -> {
+			if (schoolName == model.getSchoolName()) {
+				newModel.setSchoolId(model.getSchoolId());
+				newModel.setSchoolName(model.getSchoolName());
+				newModel.setSchoolCity(model.getSchoolCity());
+				newModel.setSchoolStrength(model.getSchoolStrength());
+			}
+		});
+
+		return newModel;
+	}
+
+}

@@ -1,0 +1,48 @@
+package com.employee.service.impl;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+import com.employee.model.EmployeeInfoModel;
+import com.employee.service.IEmployeeService;
+
+@Service
+public class EmployeeServiceImpl implements IEmployeeService{
+	
+	List<EmployeeInfoModel> empList = new ArrayList<>();
+	public EmployeeServiceImpl() {
+		EmployeeInfoModel model = new EmployeeInfoModel();
+		model.setId(1);
+		model.setName("vik1");
+		model.setSalary(10000);
+		
+		EmployeeInfoModel model1 = new EmployeeInfoModel();
+		model1.setId(2);
+		model1.setName("vik2");
+		model1.setSalary(15000);
+		
+		EmployeeInfoModel model2 = new EmployeeInfoModel();
+		model.setId(2);
+		model.setName("vik2");
+		model.setSalary(20000);
+	}
+	
+	
+	public List<EmployeeInfoModel> findAllEmployee() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public EmployeeInfoModel findEmployeeById(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public EmployeeInfoModel findEmployeeByName(String name) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}
